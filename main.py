@@ -20,7 +20,7 @@ def main():
         screen.fill("black")
         pygame.display.flip()
 
-        delta = clock.tick(60)
+        delta : int = clock.tick(60)
         dt = delta / 1000
         #print (f"{dt}")
 
