@@ -2,6 +2,7 @@ import pygame
 from constants import SCREEN_WIDTH, SCREEN_HEIGHT
 from logger import log_state
 
+
 def main():
     pygame.init()
     clock = pygame.time.Clock()
@@ -12,7 +13,6 @@ def main():
     print(f"Screen height: {SCREEN_HEIGHT}")
 
     while True:
-
         log_state()
         for event in pygame.event.get():
             pass
@@ -20,14 +20,14 @@ def main():
         screen.fill("black")
         pygame.display.flip()
 
-        delta : int = clock.tick(60)
+        delta: int = clock.tick(60)
         dt = delta / 1000
-        #print (f"{dt}")
+        # print (f"{dt}")
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 return
-        
+
 
 if __name__ == "__main__":
     main()
