@@ -22,18 +22,13 @@ def main():
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 return
-
-
+            
         screen.fill("black")
-
-        #x: int = SCREEN_HEIGHT / 2
-       # y: int = SCREEN_WIDTH / 2
-       # player: Player = Player(y, x, PLAYER_RADIUS)
         player.draw(screen)
 
         pygame.display.flip()
         dt = clock.tick(60) / 1000
-
+        player.update(dt)
         # print (f"{dt}")
 
 
